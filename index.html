@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,11 +16,31 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Hello World!</h1>
         <h2>Hello Jack!</h2>
         <p>my first githubPage</p>
+
+        <hr>
+        <h2>↓↓↓</h2>
+        <button id="btn">侯哥点击这个按钮</button>
     </div>
+    <script type="module">
+        import { speak } from './node_modules/say/index';
+        // import say from 'say';
+
+        btn.onclick = () => {
+            new Promise((resole) => {
+                speak('侯毅哥哥', null, null, () => {
+                    resole();
+                });
+            }).then(() => {
+                speak('鸡你太美，只因你太美');
+            });
+        }
+    </script>
 </body>
+
 </html>
